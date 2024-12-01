@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  height: 5rem;
+  position: fixed;
+  z-index: 99;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  margin-top: 6rem;
+  z-index: 98;
+  margin: 6rem auto;
+  max-width: 100rem;
+}
+img {
+  height: 50rem;
+}
+
+.image-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1rem;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1rem;
+}

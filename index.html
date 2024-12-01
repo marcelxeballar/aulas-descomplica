@@ -3,7 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Aulas Descomplica</title>
   </head>
-  <body></body>
+  <body>
+    <header></header>
+    <div class="image-wrapper"></div>
+  </body>
+  <script>
+    const imageWrapper = document.querySelector(".image-wrapper");
+
+    Array.from({ length: 14 }, (_, i) => {
+      const anchor = document.createElement("a");
+      anchor.href =
+        "https://www.pexels.com/photo/a-duck-on-a-lake-at-sunset-26424619";
+      anchor.target = "_blank";
+
+      const img = document.createElement("img");
+      img.alt = "Photo by Jovan Vasiljević";
+      img.src = `images/${i + 1}.jpg`;
+
+      anchor.appendChild(img);
+      imageWrapper.appendChild(anchor);
+    });
+  </script>
 </html>
